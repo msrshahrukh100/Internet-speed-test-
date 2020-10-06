@@ -16,6 +16,9 @@ def test(iterations):
     return download / iterations, res["upload"] / iterations
 
 
-print()
-print(test(10))
+print("Results - ")
+download, upload = test(10)
+
+print('Download: {:.2f} Kb/s\n'.format(download / 1024))
+print('Upload: {:.2f} Kb/s\n'.format(upload / 1024))
 
